@@ -1,0 +1,459 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 3500px;
+    background-color:white;
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    perspective: 700px;
+}
+.header{
+    width: 90vw;
+    height: 90px;
+    margin: auto;
+    /* background-color: rgba(253, 196, 255, 0.623); */
+    /* position: absolute; */
+    left: 5%;
+    top: 10px;
+    z-index: 300;
+}
+.logo{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 30px;
+    z-index: 302;
+    
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    position: relative;
+    padding: 10px;
+    font-size: 25px;
+
+}
+nav ul{
+    margin-top: 15px;
+    margin-left: 300px;
+}
+nav li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+}
+nav li a::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 0;
+    height: 0;
+    left: 0;
+    transition: 0.5s;
+    border:2px solid transparent;
+
+}
+nav li a:hover::before{
+    width: 100%;
+    height: 100%;
+    border-bottom-color: rgba(228, 105, 197, 0.3) ;
+    border-left-color:  rgba(228, 105, 197, 0.3);
+}
+nav li a::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 0%;
+    height: 0;
+    right: 0;
+    transition: 0.5s;
+    border:2px solid transparent;
+}
+nav li a:hover::after{
+    width: 100%;
+    height: 100%;
+    border-top-color:  rgba(228, 105, 197, 0.3) ;
+    border-right-color: rgba(228, 105, 197, 0.3);
+} 
+.dropdown{
+    width: 450px;
+    height: 160px;
+    background-color:rgba(228, 105, 197, 0.3);
+    color: black;
+    margin-top: 50px;
+    border-spacing: 0 15px;
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    z-index: 5;
+    margin-left: 0px;
+    display: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+
+}
+.dropdownmenu:hover ~ .dropdown{
+    display: block;
+}
+th, td{
+    text-align: center;
+    text-transform: capitalize;
+    padding-left: 45px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.dropdownmenu:hover .dropdown{
+    display: block;
+}
+.circle{
+    width: 15px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(228, 105, 197, 0.3);
+    text-align: center;
+    display: inline-block;
+    margin-left: -13px;
+}
+nav span{
+    text-transform: capitalize;
+}
+main .sec1container{
+    width:80vw;
+    height: 85vh;
+    margin: auto;
+    background-image: url(../images/jaclyn-moy-ugZxwLQuZec-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+.sec1overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.sec1content{
+    width: 60vw;
+    height: 50%;
+    margin-top: 100px;
+}
+.sec1content h2{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20%;
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 10px white;
+}
+.sec1content h3{
+    padding-top: 30px;
+    padding-left: 60px;
+    font-size: 30px;
+    text-shadow: 1px 1px 10px white;
+}
+main button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 30%;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(226, 69, 187, 0.699);
+    font-size: 15px;
+    transition: 1s;
+}
+main button a{
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 20px rgba(226, 69, 187, 0.699);
+
+}
+main button:hover{
+    background-color: rgba(226, 69, 187, 0.699) ;
+}
+.sec2container{
+    width: 95vw;
+    height: 110vh;
+    /* background-color: blueviolet; */
+    margin: auto;
+}
+.sec2parent{
+    overflow: hidden;
+}
+.sec2content{
+    width: 40%;
+    height: 70px;
+    margin: auto;
+    text-align: center;
+}
+.sec2content h2{
+    font-size: 30px;
+    text-transform: capitalize;
+    padding-top: 30px;
+    text-shadow: 1px 1px 10px white;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background-color:rgba(226, 69, 187, 0.699) ;
+    border-radius: 50px;
+    margin: auto;
+    transition: 1s;
+    margin-top: 3px;
+}
+.line:hover{
+    transform: scaleX(2);
+}
+.sec2card{
+    width: 290px;
+    height: 500px;
+    /* background-color: antiquewhite; */
+    margin: 20px 20px;
+    float: left;
+    background-image: url(../images/9903b0d990a7254385bd3df396d89e66.jpg);
+    background-size: cover;
+
+}
+.sec2card h3{
+    text-align: center;
+    margin-top: 140%;
+    color: white;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.sec2card p{
+    padding-left: 60%;
+    color: white;
+    font-style: italic;
+    text-shadow: 1px 1px 10px black;
+}
+.quote{
+    padding-left: 30px;
+    font-size: 70px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.8);
+}
+.sec2parent i{
+    display: block;
+    font-size: 40px;
+    background:-webkit-linear-gradient(#000, rgba(228, 105, 197, 0.699));
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-weight: 900;
+    transition: 0.2s;
+    opacity: 0;
+}
+.sec2card:hover + i{
+    opacity: 1;
+}
+.sec3container{
+    width: 100%;
+    height: 60vh;
+    /* background-color: #000; */
+    margin: auto;
+    overflow: hidden;
+}
+.sec3content{
+    width: 40%;
+    height: 80%;
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    border: 1px double rgba(228, 105, 197, 0.699);
+    border-radius: 40px;
+    box-shadow: 1px 1px 18px 5px black;
+}
+.sec3img{
+    width: 55%;
+    height: 100%;
+    float: left;
+    margin-left:50px ;
+    margin-top: 15px;
+    overflow: auto;
+}
+.sec3img .img{
+    width:40%;
+    height: 90%;
+    margin-left: 10px;
+    background-size: cover;
+    float: left;
+
+}
+.sec3img .img:hover{
+    transform: scale(1.02, 1.02);
+}
+.img h3{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-transform: capitalize;
+}
+.sec3content h2{
+    display: inline;
+    padding-left: 30px;
+    padding-top: 40px;
+}
+.sec3content i{
+    font-size: 25px;
+    padding-left: 30px;
+}
+.sec3content span{
+    font-size: 12px;
+}
+.sec3content p{
+    padding-left: 30px;
+    padding-top: 40px;
+    font-size: 25px;
+}
+.sec3content hr{
+    width: 20px;
+    height: 20px;
+}
+.sign{
+    width: 40px;
+    height: 2px;
+    float: left;
+    background-color: #000;
+    margin-left: 20px;
+    border-radius: 30px;
+}
+.sec4container{
+    width: 100%;
+    height: 50vh;
+}
+.sec4parent{
+    width: 90vw;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+
+
+}
+.sec4card{
+    width: 20%;
+    height: 60%;
+    float: left;
+    margin-top: 40px;
+    border-right: 1px double rgba(228, 105, 197, 0.699);
+    text-align: center;
+}
+.sec4icon{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+.sec4icon i{
+    font-size: 60px;
+    display: block;
+    padding-top: 55px;
+    transition: 0.2s;
+}
+.sec4icon:hover i{
+    transform: translateY(-100%);
+}
+.sec4card h2{
+    padding-top: 15px;
+}
+.space{
+    width: 80%;
+    height: 1px;
+    background-color:rgba(226, 69, 187, 0.699) ;
+    border-radius: 50px;
+    margin: auto;
+}
+.sec5container{
+    width: 100%;
+    height: 100vh;
+}
+.sec5content{
+    width: 60%;
+    height: 100px;
+    margin: auto;
+
+}
+.sec5content h2{
+    font-size:40px ; 
+    text-align: center; 
+    text-transform: capitalize;
+}
+.sec5container li{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+    cursor: pointer;
+    background:-webkit-linear-gradient(#000, rgba(228, 105, 197, 0.699));
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-weight: 500;
+  
+}
+.sec5container li:hover{
+    border-bottom:1px solid  rgba(228, 105, 197, 0.3) ;
+}
+.sec5container ul{
+    padding-left: 25%;
+}
+.sec5cards{
+    width: 95%;
+    height:150vh;
+    /* background-color: antiquewhite; */
+    margin: auto;
+}
+.uppercards, .lowercards{
+    width: 100%;
+    height: 45%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.sec5card{
+    width: 25%;
+    height: 380px;
+    float: left;
+    margin-left: 80px;
+    margin-top: 100px;
+    position: relative;
+}
+.sec5card  .front{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-size: cover;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.front:hover{
+    transform: rotateY(180deg);
+}
+.sec5card img{
+    width: 100%;
+    height: 60%;
+    padding-left: 30px;
+
+}
+.sec5card h2, .sec5card h3{
+    text-align: center;
+    
+    font-size: 30px;
+    font-style: italic; 
+}
+.sec5card i{
+    padding-left: 40px;
+}
+.sec5card input{
+    margin-left: 45%;
+}
